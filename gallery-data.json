@@ -1,13 +1,335 @@
 {
   "brand": "#됒굴포토",
   "watermarkOpacity": 0.5,
-  "typeNames": ["#01 타입", "#02 타입", "#03 타입"],
+  "typeNames": [
+    "#01 타입",
+    "#02 타입",
+    "#03 타입"
+  ],
   "stickers": {
     "frogLabel": "사장 PICK",
     "heartLabel": "확정 선택"
   },
   "revision": 1,
   "photos": {
-    "1": { "src": "photos/01.jpg", "caption": "샘플 테스트 이미지", "ownerPick": false, "confirmed": false }
-  }
+    "1": {
+      "src": "photos/01.jpg",
+      "caption": "샘플 테스트 이미지",
+      "ownerPick": false,
+      "confirmed": false
+    }
+  },
+  "schemaVersion": 3,
+  "types": [
+    {
+      "id": "type-1",
+      "name": "#01 타입",
+      "order": 0,
+      "photos": [
+        {
+          "src": "photos/01.jpg",
+          "caption": "샘플 테스트 이미지",
+          "ownerPick": false,
+          "confirmed": false,
+          "id": "sample-01",
+          "number": 1,
+          "legacyNumber": 1
+        },
+        {
+          "id": "sample-02",
+          "number": 2,
+          "legacyNumber": 2,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-03",
+          "number": 3,
+          "legacyNumber": 3,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-04",
+          "number": 4,
+          "legacyNumber": 4,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-05",
+          "number": 5,
+          "legacyNumber": 5,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-06",
+          "number": 6,
+          "legacyNumber": 6,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-07",
+          "number": 7,
+          "legacyNumber": 7,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-08",
+          "number": 8,
+          "legacyNumber": 8,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-09",
+          "number": 9,
+          "legacyNumber": 9,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-10",
+          "number": 10,
+          "legacyNumber": 10,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-11",
+          "number": 11,
+          "legacyNumber": 11,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-12",
+          "number": 12,
+          "legacyNumber": 12,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        }
+      ]
+    },
+    {
+      "id": "type-2",
+      "name": "#02 타입",
+      "order": 1,
+      "photos": [
+        {
+          "id": "sample-13",
+          "number": 1,
+          "legacyNumber": 13,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-14",
+          "number": 2,
+          "legacyNumber": 14,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-15",
+          "number": 3,
+          "legacyNumber": 15,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-16",
+          "number": 4,
+          "legacyNumber": 16,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-17",
+          "number": 5,
+          "legacyNumber": 17,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-18",
+          "number": 6,
+          "legacyNumber": 18,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-19",
+          "number": 7,
+          "legacyNumber": 19,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-20",
+          "number": 8,
+          "legacyNumber": 20,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-21",
+          "number": 9,
+          "legacyNumber": 21,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-22",
+          "number": 10,
+          "legacyNumber": 22,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-23",
+          "number": 11,
+          "legacyNumber": 23,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-24",
+          "number": 12,
+          "legacyNumber": 24,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        }
+      ]
+    },
+    {
+      "id": "type-3",
+      "name": "#03 타입",
+      "order": 2,
+      "photos": [
+        {
+          "id": "sample-25",
+          "number": 1,
+          "legacyNumber": 25,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-26",
+          "number": 2,
+          "legacyNumber": 26,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-27",
+          "number": 3,
+          "legacyNumber": 27,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-28",
+          "number": 4,
+          "legacyNumber": 28,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-29",
+          "number": 5,
+          "legacyNumber": 29,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-30",
+          "number": 6,
+          "legacyNumber": 30,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-31",
+          "number": 7,
+          "legacyNumber": 31,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-32",
+          "number": 8,
+          "legacyNumber": 32,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-33",
+          "number": 9,
+          "legacyNumber": 33,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-34",
+          "number": 10,
+          "legacyNumber": 34,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-35",
+          "number": 11,
+          "legacyNumber": 35,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-36",
+          "number": 12,
+          "legacyNumber": 36,
+          "src": "",
+          "caption": "",
+          "ownerPick": false
+        }
+      ]
+    }
+  ]
 }
