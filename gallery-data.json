@@ -2,15 +2,18 @@
   "brand": "#됒굴포토",
   "watermarkOpacity": 0.5,
   "typeNames": [
-    "#01 타입",
-    "#02 타입",
-    "#03 타입"
+    "#01 비브라 여왕 공주님 컨샙_1",
+    "#02 비브라 여왕 공주님 컨샙_2",
+    "#03 비브라 여왕 공주님 컨샙_3",
+    "#04 진마 학살자+제련선봉_1",
+    "#05 진마 학살자+제련선봉_2",
+    "#06 진마 학살자+제련선봉_3"
   ],
   "stickers": {
     "frogLabel": "사장 PICK",
     "heartLabel": "확정 선택"
   },
-  "revision": 1795239731436,
+  "revision": 1795240849760,
   "photos": {
     "1": {
       "src": "photos/01.jpg",
@@ -23,11 +26,11 @@
   "types": [
     {
       "id": "type-1",
-      "name": "#01 타입",
+      "name": "#01 비브라 여왕 공주님 컨샙_1",
       "order": 0,
       "photos": [
         {
-          "src": "photos/sample-01-712b56db-0d36-4a4a-9407-05e044199d1f.png",
+          "src": "photos/sample-01-fa89de9a-f34c-4d41-88fb-2494eeb34095.png",
           "caption": "샘플 테스트 이미지",
           "ownerPick": false,
           "confirmed": false,
@@ -39,7 +42,7 @@
           "id": "sample-02",
           "number": 2,
           "legacyNumber": 2,
-          "src": "photos/sample-02-f958b541-6af8-4181-ba9b-80554762ad2a.png",
+          "src": "photos/sample-02-f23be0d5-e25b-49e5-afaa-05aee4604cf1.png",
           "caption": "",
           "ownerPick": false
         },
@@ -55,15 +58,15 @@
           "id": "sample-04",
           "number": 4,
           "legacyNumber": 4,
-          "src": "photos/sample-04-2ee0fe30-2d67-41b2-8024-ac57a1249aa8.png",
+          "src": "photos/sample-04-76e03968-6f6e-46e4-a4ae-955d0af3e6a0.png",
           "caption": "",
-          "ownerPick": false
+          "ownerPick": true
         },
         {
           "id": "sample-05",
           "number": 5,
           "legacyNumber": 5,
-          "src": "",
+          "src": "photos/sample-05-f36e7c58-d8af-4d08-9163-1571005356f8.png",
           "caption": "",
           "ownerPick": false
         },
@@ -71,7 +74,7 @@
           "id": "sample-06",
           "number": 6,
           "legacyNumber": 6,
-          "src": "",
+          "src": "photos/sample-06-2df88bcc-cabb-43b7-b4e7-13d600ba857b.png",
           "caption": "",
           "ownerPick": false
         },
@@ -79,15 +82,15 @@
           "id": "sample-07",
           "number": 7,
           "legacyNumber": 7,
-          "src": "",
+          "src": "photos/sample-07-1df0a690-f573-4a40-b09b-fff4aafccebf.png",
           "caption": "",
-          "ownerPick": false
+          "ownerPick": true
         },
         {
           "id": "sample-08",
           "number": 8,
           "legacyNumber": 8,
-          "src": "",
+          "src": "photos/sample-08-bc33132b-a39e-4e20-8db1-0e7ff6418620.png",
           "caption": "",
           "ownerPick": false
         },
@@ -95,7 +98,7 @@
           "id": "sample-09",
           "number": 9,
           "legacyNumber": 9,
-          "src": "",
+          "src": "photos/sample-09-c924bcf5-e6c7-46c5-ac8a-5e4a39e5e6fe.png",
           "caption": "",
           "ownerPick": false
         },
@@ -103,7 +106,7 @@
           "id": "sample-10",
           "number": 10,
           "legacyNumber": 10,
-          "src": "",
+          "src": "photos/sample-10-d6483bae-be50-401d-814c-e4832afa50d1.png",
           "caption": "",
           "ownerPick": false
         },
@@ -111,7 +114,7 @@
           "id": "sample-11",
           "number": 11,
           "legacyNumber": 11,
-          "src": "",
+          "src": "photos/sample-11-a833d8c8-d0ef-4ecd-a733-54253b25fcf8.png",
           "caption": "",
           "ownerPick": false
         },
@@ -119,7 +122,7 @@
           "id": "sample-12",
           "number": 12,
           "legacyNumber": 12,
-          "src": "",
+          "src": "photos/sample-12-6a3f7ff4-a31c-4ced-aa58-d14ce8637ddb.png",
           "caption": "",
           "ownerPick": false
         }
@@ -127,14 +130,14 @@
     },
     {
       "id": "type-2",
-      "name": "#02 타입",
+      "name": "#02 비브라 여왕 공주님 컨샙_2",
       "order": 1,
       "photos": [
         {
           "id": "sample-13",
           "number": 1,
           "legacyNumber": 13,
-          "src": "",
+          "src": "photos/sample-13-db67ded0-6e0b-4872-86bb-806be0ea3029.png",
           "caption": "",
           "ownerPick": false
         },
@@ -142,7 +145,7 @@
           "id": "sample-14",
           "number": 2,
           "legacyNumber": 14,
-          "src": "",
+          "src": "photos/sample-14-76eaa200-45ad-4d1b-863d-b15e4ceaa4c4.png",
           "caption": "",
           "ownerPick": false
         },
@@ -150,7 +153,7 @@
           "id": "sample-15",
           "number": 3,
           "legacyNumber": 15,
-          "src": "",
+          "src": "photos/sample-15-fe5ebbcb-44bf-423d-828d-8058b00c1629.png",
           "caption": "",
           "ownerPick": false
         },
@@ -158,7 +161,7 @@
           "id": "sample-16",
           "number": 4,
           "legacyNumber": 16,
-          "src": "",
+          "src": "photos/sample-16-971ae699-56bc-476e-a708-bfca74046a62.png",
           "caption": "",
           "ownerPick": false
         },
@@ -166,7 +169,7 @@
           "id": "sample-17",
           "number": 5,
           "legacyNumber": 17,
-          "src": "",
+          "src": "photos/sample-17-8d61eea9-f27c-41ea-9ab0-2de33896fbf7.png",
           "caption": "",
           "ownerPick": false
         },
@@ -174,7 +177,7 @@
           "id": "sample-18",
           "number": 6,
           "legacyNumber": 18,
-          "src": "",
+          "src": "photos/sample-18-a1e6e80f-c573-434d-a028-6398673396ad.png",
           "caption": "",
           "ownerPick": false
         },
@@ -182,7 +185,7 @@
           "id": "sample-19",
           "number": 7,
           "legacyNumber": 19,
-          "src": "",
+          "src": "photos/sample-19-09e4f6bc-82b2-453e-9990-5a4d66707ede.png",
           "caption": "",
           "ownerPick": false
         },
@@ -190,7 +193,7 @@
           "id": "sample-20",
           "number": 8,
           "legacyNumber": 20,
-          "src": "",
+          "src": "photos/sample-20-e82d88a8-58d6-422f-8ba7-12f960317441.png",
           "caption": "",
           "ownerPick": false
         },
@@ -198,7 +201,7 @@
           "id": "sample-21",
           "number": 9,
           "legacyNumber": 21,
-          "src": "",
+          "src": "photos/sample-21-e739ae77-962e-4af7-bfc4-9a0d6ec4be45.png",
           "caption": "",
           "ownerPick": false
         },
@@ -206,7 +209,7 @@
           "id": "sample-22",
           "number": 10,
           "legacyNumber": 22,
-          "src": "",
+          "src": "photos/sample-22-2e983aa4-7875-407f-8518-0b806e82b06e.png",
           "caption": "",
           "ownerPick": false
         },
@@ -214,7 +217,7 @@
           "id": "sample-23",
           "number": 11,
           "legacyNumber": 23,
-          "src": "",
+          "src": "photos/sample-23-da6655ad-50de-498d-9bb5-7d78ee824288.png",
           "caption": "",
           "ownerPick": false
         },
@@ -222,7 +225,7 @@
           "id": "sample-24",
           "number": 12,
           "legacyNumber": 24,
-          "src": "",
+          "src": "photos/sample-24-1262c5f8-7e65-43b3-94cf-2c33c060dd41.png",
           "caption": "",
           "ownerPick": false
         }
@@ -230,14 +233,14 @@
     },
     {
       "id": "type-3",
-      "name": "#03 타입",
+      "name": "#03 비브라 여왕 공주님 컨샙_3",
       "order": 2,
       "photos": [
         {
           "id": "sample-25",
           "number": 1,
           "legacyNumber": 25,
-          "src": "",
+          "src": "photos/sample-25-d0c2fb3b-d91e-4e0f-9546-6ddfa0acfab2.png",
           "caption": "",
           "ownerPick": false
         },
@@ -245,7 +248,7 @@
           "id": "sample-26",
           "number": 2,
           "legacyNumber": 26,
-          "src": "",
+          "src": "photos/sample-26-5f7f43ae-ec7a-479a-ad93-324482986ec2.png",
           "caption": "",
           "ownerPick": false
         },
@@ -253,7 +256,7 @@
           "id": "sample-27",
           "number": 3,
           "legacyNumber": 27,
-          "src": "",
+          "src": "photos/sample-27-2158adf7-717d-4213-bd9d-1b8adcd4df2b.png",
           "caption": "",
           "ownerPick": false
         },
@@ -261,7 +264,7 @@
           "id": "sample-28",
           "number": 4,
           "legacyNumber": 28,
-          "src": "",
+          "src": "photos/sample-28-04e23469-0b92-4b4c-8cc6-f9f63de9bdf0.png",
           "caption": "",
           "ownerPick": false
         },
@@ -269,7 +272,7 @@
           "id": "sample-29",
           "number": 5,
           "legacyNumber": 29,
-          "src": "",
+          "src": "photos/sample-29-c2952499-b3ab-4e8e-aa58-f7fde4519987.png",
           "caption": "",
           "ownerPick": false
         },
@@ -326,6 +329,279 @@
           "number": 12,
           "legacyNumber": 36,
           "src": "",
+          "caption": "",
+          "ownerPick": false
+        }
+      ]
+    },
+    {
+      "id": "type-5912f016-bb4e-41bc-bf5a-5c27213dee99",
+      "name": "#04 진마 학살자+제련선봉_1",
+      "order": 3,
+      "photos": [
+        {
+          "id": "sample-4ee30fb8-353f-4f76-b258-b3364a7f4717",
+          "number": 1,
+          "src": "photos/sample-4ee30fb8-353f-4f76-b258-b3364a7f4717-ea4517e3-370c-4c9a-9d99-d6c8a2cdd9a9.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-b37a1cd8-2dbc-4257-882d-7a54f4c0edb2",
+          "number": 2,
+          "src": "photos/sample-b37a1cd8-2dbc-4257-882d-7a54f4c0edb2-e83d6165-7c68-4638-a3e9-2f907e22d7d4.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-4bdac917-109a-4bbd-aa15-241655dec6d0",
+          "number": 3,
+          "src": "photos/sample-4bdac917-109a-4bbd-aa15-241655dec6d0-e3307c69-742a-4ab8-8a66-f07ceb0f37be.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-be534142-a47d-4afb-8eaa-d0d319c5dc79",
+          "number": 4,
+          "src": "photos/sample-be534142-a47d-4afb-8eaa-d0d319c5dc79-25051d98-a38c-49aa-a72e-9e23127152b2.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-ecf14577-ce46-4e8c-9569-6023625d1494",
+          "number": 5,
+          "src": "photos/sample-ecf14577-ce46-4e8c-9569-6023625d1494-1c5f864e-b59d-42f1-bd19-80007fc90b87.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-04a5d97b-9da3-4a5a-bb3c-6998f543d133",
+          "number": 6,
+          "src": "photos/sample-04a5d97b-9da3-4a5a-bb3c-6998f543d133-6aff622c-fd16-4136-80f7-dc3bee6835f0.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-12b10d14-a937-46fb-88df-c0c42bd865c2",
+          "number": 7,
+          "src": "photos/sample-12b10d14-a937-46fb-88df-c0c42bd865c2-d42ff7d7-7794-4e79-bb67-a35490d4c4be.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-5b92db7e-767b-4513-a63f-1870b06e6afa",
+          "number": 8,
+          "src": "photos/sample-5b92db7e-767b-4513-a63f-1870b06e6afa-c90bcefe-2514-48af-8ed5-f3a2fdc74d62.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-aa0aad18-466b-4eda-a056-6b52ce1626ff",
+          "number": 9,
+          "src": "photos/sample-aa0aad18-466b-4eda-a056-6b52ce1626ff-f7f6562e-2b1c-43e9-b57c-dcc4c15dd43c.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-65951b12-0404-4e19-bc6e-0c516d26b0e4",
+          "number": 10,
+          "src": "photos/sample-65951b12-0404-4e19-bc6e-0c516d26b0e4-c5daa47c-2ab2-4c20-8c8c-3dcbc88a0972.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-f6eba372-f147-4dab-851c-79b0e251dfd4",
+          "number": 11,
+          "src": "photos/sample-f6eba372-f147-4dab-851c-79b0e251dfd4-46ff3bb4-e6c9-4db4-b43b-46c540702ec7.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-86aeee75-1e54-4aa5-9955-3aeef1cda8ef",
+          "number": 12,
+          "src": "photos/sample-86aeee75-1e54-4aa5-9955-3aeef1cda8ef-6075989b-86a5-4faf-9efd-dca72d4f251b.png",
+          "caption": "",
+          "ownerPick": false
+        }
+      ]
+    },
+    {
+      "id": "type-094f7c86-0510-48a6-85a3-f11fc7881524",
+      "name": "#05 진마 학살자+제련선봉_2",
+      "order": 4,
+      "photos": [
+        {
+          "id": "sample-a37a7dd6-5f30-44cc-bc9c-8144e2e88adf",
+          "number": 1,
+          "src": "photos/sample-a37a7dd6-5f30-44cc-bc9c-8144e2e88adf-e1841ac8-80b2-41d5-b9aa-c7186689a820.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-42e65b30-777a-4d43-970b-c1b4f1ec0609",
+          "number": 2,
+          "src": "photos/sample-42e65b30-777a-4d43-970b-c1b4f1ec0609-f3c9625c-e39e-45db-9772-6f79ed3b5642.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-a6401e71-a55a-4be0-a57f-5e13eb6e0a6b",
+          "number": 3,
+          "src": "photos/sample-a6401e71-a55a-4be0-a57f-5e13eb6e0a6b-66e37513-7ef2-462f-8b99-4355d22da0c4.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-8efa1380-46e9-4f14-9075-096f216481f0",
+          "number": 4,
+          "src": "photos/sample-8efa1380-46e9-4f14-9075-096f216481f0-22cfff98-6d8c-44b4-9fbf-a8db3dfe45e6.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-87c67f83-7743-4752-a271-e664bff26d4d",
+          "number": 5,
+          "src": "photos/sample-87c67f83-7743-4752-a271-e664bff26d4d-6a099e7d-fc9a-43c0-9288-041f65b3922a.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-42bf0247-c3bd-4fcb-ae10-a1149c80d8e1",
+          "number": 6,
+          "src": "photos/sample-42bf0247-c3bd-4fcb-ae10-a1149c80d8e1-4c332c72-6488-419b-a199-048eb6d092b9.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-775aef42-046f-432b-bacd-4684be9a2fbe",
+          "number": 7,
+          "src": "photos/sample-775aef42-046f-432b-bacd-4684be9a2fbe-7a43632c-f47a-49d1-8113-37df1e0ab2db.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-0258f8fc-ba30-4116-a395-2c48d992802d",
+          "number": 8,
+          "src": "photos/sample-0258f8fc-ba30-4116-a395-2c48d992802d-826a9109-aab1-4ceb-ac8a-00c6d511ebc6.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-89ba1d5b-81b0-4add-96e7-d6356eea906f",
+          "number": 9,
+          "src": "photos/sample-89ba1d5b-81b0-4add-96e7-d6356eea906f-6abb992a-87b4-4da2-9997-5e2298c7667d.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-116af59b-f166-4562-9ec6-5e535ce78dc4",
+          "number": 10,
+          "src": "photos/sample-116af59b-f166-4562-9ec6-5e535ce78dc4-a2debbfa-63d4-4e47-bbb2-57fef5dc54fd.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-170c5b94-f698-4445-94e5-97e33b2bf6a3",
+          "number": 11,
+          "src": "photos/sample-170c5b94-f698-4445-94e5-97e33b2bf6a3-89745968-da1e-49d3-8f15-f542b53cb51c.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-3c0f431d-c661-451c-8438-e33ec7da0470",
+          "number": 12,
+          "src": "photos/sample-3c0f431d-c661-451c-8438-e33ec7da0470-047a771a-5d2c-4621-a82f-f382884ff82a.png",
+          "caption": "",
+          "ownerPick": true
+        }
+      ]
+    },
+    {
+      "id": "type-a5b3ad5a-4cc3-479e-a66a-cfcd02dd7492",
+      "name": "#06 진마 학살자+제련선봉_3",
+      "order": 5,
+      "photos": [
+        {
+          "id": "sample-9f81f1f4-f544-4a24-aefa-a5d394a78bba",
+          "number": 1,
+          "src": "photos/sample-9f81f1f4-f544-4a24-aefa-a5d394a78bba-fe14a528-5ef8-47fa-9a7d-1dc67e0069b3.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-119d738d-03cb-4a07-b97d-f424639a215b",
+          "number": 2,
+          "src": "photos/sample-119d738d-03cb-4a07-b97d-f424639a215b-62900453-3e98-4ff8-811e-f5a8a90d1833.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-fcb54818-dbaa-49cd-b881-2e41e17256c5",
+          "number": 3,
+          "src": "photos/sample-fcb54818-dbaa-49cd-b881-2e41e17256c5-0c09851a-88cb-41ec-8f3b-40623b1c5c0f.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-05fbafa9-d5b5-4c10-a637-547cddb0e8a6",
+          "number": 4,
+          "src": "photos/sample-05fbafa9-d5b5-4c10-a637-547cddb0e8a6-372c7c4d-80cb-4971-9453-cdb709829e33.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-69ba43de-24e9-4b6b-bef3-dedc73004eec",
+          "number": 5,
+          "src": "photos/sample-69ba43de-24e9-4b6b-bef3-dedc73004eec-d42ac757-db6a-4801-a243-a2506787910f.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-53f8753b-db48-492e-a78d-f438f0bc4632",
+          "number": 6,
+          "src": "photos/sample-53f8753b-db48-492e-a78d-f438f0bc4632-8d63bb00-7491-4966-a7fa-f224f14cabdf.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-82ce0cec-733b-4125-b43b-aba7a173a668",
+          "number": 7,
+          "src": "photos/sample-82ce0cec-733b-4125-b43b-aba7a173a668-d49756fb-d37c-4f37-9c96-ad3bb55e2d70.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-4f3e0921-93fc-439e-8f06-2a33f9748dad",
+          "number": 8,
+          "src": "photos/sample-4f3e0921-93fc-439e-8f06-2a33f9748dad-d6c72c46-f2d3-4a5c-8e53-3973ffb31b35.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-d6a4f63f-be1d-4eb3-a3ac-67f391881c86",
+          "number": 9,
+          "src": "photos/sample-d6a4f63f-be1d-4eb3-a3ac-67f391881c86-76102436-1707-4352-af5e-5560cc140a53.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-958ae948-4702-40a5-92dc-e09e619590e8",
+          "number": 10,
+          "src": "photos/sample-958ae948-4702-40a5-92dc-e09e619590e8-2136181b-c1a5-4ea5-99a4-57f43e4b34e0.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-9f0767ec-f028-4f42-8851-a58e1261be3b",
+          "number": 11,
+          "src": "photos/sample-9f0767ec-f028-4f42-8851-a58e1261be3b-c567d15f-7831-455d-a63f-294bfcf0178e.png",
+          "caption": "",
+          "ownerPick": false
+        },
+        {
+          "id": "sample-1d8e0ba9-f0a3-4c20-82d2-4cf1200660b2",
+          "number": 12,
+          "src": "photos/sample-1d8e0ba9-f0a3-4c20-82d2-4cf1200660b2-c1a97559-cc7d-4467-ba4a-cd3d02e03181.png",
           "caption": "",
           "ownerPick": false
         }
