@@ -10,7 +10,7 @@
     "frogLabel": "사장 PICK",
     "heartLabel": "확정 선택"
   },
-  "revision": 1,
+  "revision": 1795239731436,
   "photos": {
     "1": {
       "src": "photos/01.jpg",
@@ -27,7 +27,7 @@
       "order": 0,
       "photos": [
         {
-          "src": "photos/01.jpg",
+          "src": "photos/sample-01-712b56db-0d36-4a4a-9407-05e044199d1f.png",
           "caption": "샘플 테스트 이미지",
           "ownerPick": false,
           "confirmed": false,
@@ -39,7 +39,7 @@
           "id": "sample-02",
           "number": 2,
           "legacyNumber": 2,
-          "src": "",
+          "src": "photos/sample-02-f958b541-6af8-4181-ba9b-80554762ad2a.png",
           "caption": "",
           "ownerPick": false
         },
@@ -47,7 +47,7 @@
           "id": "sample-03",
           "number": 3,
           "legacyNumber": 3,
-          "src": "",
+          "src": "photos/sample-03-862080bd-9468-4e72-a3e3-2bd6b3bb79e3.png",
           "caption": "",
           "ownerPick": false
         },
@@ -55,7 +55,7 @@
           "id": "sample-04",
           "number": 4,
           "legacyNumber": 4,
-          "src": "",
+          "src": "photos/sample-04-2ee0fe30-2d67-41b2-8024-ac57a1249aa8.png",
           "caption": "",
           "ownerPick": false
         },
