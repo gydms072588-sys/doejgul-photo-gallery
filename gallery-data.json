@@ -13,7 +13,7 @@
     "frogLabel": "사장 PICK",
     "heartLabel": "확정 선택"
   },
-  "revision": 1795240849760,
+  "revision": 1795244350613,
   "photos": {
     "1": {
       "src": "photos/01.jpg",
@@ -84,7 +84,7 @@
           "legacyNumber": 7,
           "src": "photos/sample-07-1df0a690-f573-4a40-b09b-fff4aafccebf.png",
           "caption": "",
-          "ownerPick": true
+          "ownerPick": false
         },
         {
           "id": "sample-08",
