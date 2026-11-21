@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171717">
+  <meta name="description" content="됒굴포토 촬영 샘플 갤러리">
+  <title>됒굴포토 | 샘플 갤러리</title>
+  <style>
+    :root{font-family:Pretendard,"Noto Sans KR","Apple SD Gothic Neo", "Malgun Gothic",sans-serif; color-scheme:dark; --bg:#171717;--panel:#080808;--gray:#969696;--line:#3b3b3b;--ink:#fff;--muted:#999;--focus:#b8f5a7;--watermark-opacity:.5}
+    *{box-sizing:border-box}html,body{min-height:100%;margin:0}body{background:var(--bg);color:var(--ink)}button,input,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #bbf1a9;outline-offset:2px}[hidden]{display:none!important}
+    .page-shell{min-height:100vh;padding:36px 16px 24px;display:flex;align-items:center;justify-content:center;flex-direction:column}
+    .gallery{width:min(100%,760px);background:#000;box-shadow:0 20px 60px #0004}
+    .gallery-header{min-height:100px;padding:19px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    h1{font-size:clamp(28px,4vw,38px);letter-spacing:-.065em;margin:0;font-weight:850;line-height:1.12}
+    .legend{display:flex;gap:11px;align-items:center}.legend-item{display:flex;flex-direction:column;gap:4px;align-items:center;font-size:10px;font-weight:750;color:#c8c8c8;white-space:nowrap}
+    .secret-trigger{background:none;border:0;padding:2px;display:grid;place-items:center;border-radius:12px}.secret-trigger:hover{background:#242424}.legend-icon{width:30px;height:30px;display:block}.heart-legend{display:grid;place-items:center;width:34px;height:34px}
+    .gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#b7b7b7}
+    .tile{width:100%;position:relative;aspect-ratio:2/3;min-width:0;padding:0;border:0;background:var(--gray);text-align:left;overflow:hidden;isolation:isolate;display:block;cursor:zoom-in}
+    .tile:focus-visible{outline-offset:-3px;outline:3px solid white}.tile:hover::after{content:"";inset:0;position:absolute;border:2px solid #fff9;z-index:9;pointer-events:none}
+    .tile img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .22s}.tile:hover img{transform:scale(1.04)}
+    .tile-number{position:absolute;bottom:-.07em;right:1px;z-index:5;font-size:clamp(36px,5.7vw,60px);letter-spacing:-.065em;line-height:.94;font-weight:800;color:#fff;text-shadow:0 1px 4px #0002}
+    .tile-mark{position:absolute;left:12%;z-index:3;top:16%;color:#5e5e5e;opacity:.45;font-weight:850;font-size:clamp(12px,2vw,18px);pointer-events:none;white-space:nowrap;letter-spacing:-.045em}
+    .tile-mark.second{top:66%}.tile.has-photo .tile-mark{color:white;opacity:.24;text-shadow:0 2px 3px #000b}
+    .tile-stickers{position:absolute;right:8px;top:8px;z-index:7;display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+    .sticker{width:34px;height:34px;border:1px solid #fffb;background:#101010b9;box-shadow:0 2px 12px #0005;border-radius:100%;display:grid;place-items:center;backdrop-filter:blur(3px)}.sticker svg{width:24px;height:24px}.sticker.heart{border-color:#ffaeb9}
+    .pagination{min-height:86px;display:flex;align-items:center;justify-content:center;gap:5px}.page-item,.page-arrow{padding:4px;border:0;background:none;color:white;font-size:29px;font-weight:850;line-height:1;min-width:20px}.page-item{opacity:.43}.page-item[aria-current="page"]{opacity:1}.page-arrow:disabled{opacity:.22;cursor:default}
+    .caption{max-width:760px;text-align:center;font-size:12px;color:#999;line-height:1.7;margin:14px auto 0}
+    dialog{background:#0f0f0f;border:0;color:white;max-width:none;max-height:none;margin:0;padding:0}dialog::backdrop{background:#000e}
+    .viewer{width:100vw;height:100dvh;overflow:hidden}.viewer-layout{height:100%;display:flex;flex-direction:column}
+    .viewer-bar{min-height:65px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 20px;border-bottom:1px solid #292929}.viewer-title{display:flex;flex-direction:column;gap:3px}.viewer-title strong{font-weight:800;font-size:17px}.viewer-title small{color:#aaa;font-size:12px}.viewer-actions{display:flex;gap:9px;align-items:center}.outline-btn{background:transparent;color:white;border:1px solid #5a5a5a;border-radius:7px;padding:9px 12px;font-size:13px}.outline-btn[aria-pressed=true]{background:white;color:black}.close-btn{background:transparent;border:0;color:white;font-size:32px;line-height:1;min-width:38px}
+    .viewer-viewport{min-height:0;flex:1;overflow:auto;padding:17px;display:flex;align-items:center;justify-content:center}.image-stage{position:relative;flex:none;line-height:0;max-width:100%}.image-stage img{display:block;max-width:100%;max-height:calc(100dvh - 173px);width:auto;height:auto;user-select:none}.viewer-watermark{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:var(--watermark-opacity);pointer-events:none;user-select:none;color:white;text-shadow:0 1px 3px #0007;transform:rotate(-17deg);font-weight:900;font-size:clamp(26px,5vw,65px);line-height:1;letter-spacing:-.05em;white-space:nowrap}
+    .viewer.is-natural .viewer-viewport{align-items:flex-start;justify-content:flex-start}.viewer.is-natural .image-stage{max-width:none;margin:auto}.viewer.is-natural .image-stage img{max-width:none;max-height:none}.viewer-sticker{position:absolute;top:12px;right:12px;display:flex;gap:6px;z-index:4}.viewer-sticker .sticker{width:44px;height:44px}.viewer-sticker .sticker svg{width:30px;height:30px}
+    .viewer-empty{padding:60px 30px;text-align:center;color:#ddd;max-width:460px;background:#262626;border-radius:12px;font-weight:650}.viewer-empty small{display:block;margin-top:12px;color:#aaa;font-weight:400}
+    .viewer-footer{min-height:69px;padding:10px 18px;border-top:1px solid #292929;display:flex;align-items:center;justify-content:space-between;gap:10px}.viewer-footer small{font-size:12px;line-height:1.5;color:#aaa;text-align:center}.nav-btn{background:transparent;color:white;border:1px solid #444;border-radius:7px;min-width:84px;padding:10px 12px}.nav-btn:disabled{opacity:.3;cursor:default}
+    /* 관리자 화면 */
+    .admin-shell{width:min(100%,1120px);margin:20px auto 65px;padding:0 20px}.admin-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px;flex-wrap:wrap}.admin-top h2{font-size:28px;letter-spacing:-.05em;margin:0}.admin-top p{font-size:13px;color:#b6b6b6;margin:8px 0 0;line-height:1.7}.admin-tools{display:flex;gap:8px;flex-wrap:wrap}
+    .admin-card{background:#242424;border:1px solid #343434;border-radius:14px;padding:20px;margin-bottom:16px}.admin-card h3{margin:0 0 15px;font-size:18px;letter-spacing:-.04em}.section-help{color:#aaa;font-size:12px;line-height:1.6;margin:-7px 0 15px}
+    .type-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.field{display:flex;flex-direction:column;gap:7px}.field>span{font-size:12px;color:#cfcfcf;font-weight:730}.field input,.field textarea{background:#111;border:1px solid #515151;border-radius:8px;min-width:0;color:white;padding:11px 12px;width:100%;font-size:14px}.field textarea{min-height:65px;resize:vertical}
+    .admin-content{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.8fr);gap:16px}.edit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.edit-slot{aspect-ratio:1/1;background:#393939;border:2px solid transparent;border-radius:8px;position:relative;overflow:hidden;color:white}.edit-slot img{width:100%;height:100%;object-fit:cover}.edit-slot.selected{border-color:#b9eda8}.edit-slot b{position:absolute;bottom:3px;right:5px;font-size:17px;text-shadow:0 1px 5px black}.edit-slot .mini-sticker{position:absolute;top:3px;left:4px;font-size:14px;line-height:1}.edit-page-nav{display:flex;align-items:center;gap:6px;margin-bottom:13px}.edit-page-nav button{border:1px solid #555;background:#151515;color:white;border-radius:7px;padding:8px 12px;font-size:13px}.edit-page-nav button.active{border-color:#c6f7b6;background:#26452c}
+    .edit-preview{width:100%;aspect-ratio:3/2;background:#151515;border:1px dashed #575757;border-radius:9px;display:flex;align-items:center;justify-content:center;overflow:hidden;margin:0 0 14px;color:#7f7f7f;font-size:14px}.edit-preview img{width:100%;height:100%;object-fit:contain}.edit-title{font-size:17px;font-weight:800;margin:0 0 11px}.edit-fields{display:flex;flex-direction:column;gap:13px}.toggle{display:flex;gap:10px;align-items:center;background:#171717;padding:10px 12px;border-radius:9px;cursor:pointer;font-size:13px}.toggle input{accent-color:#b7efa4;width:17px;height:17px}.toggle svg{width:22px;height:22px}
+    .file-input{display:block;width:100%;background:#141414;border:1px dashed #707070;border-radius:8px;padding:13px;font-size:12px;color:#ddd}.edit-footer{display:flex;gap:8px;margin-top:15px;flex-wrap:wrap}
+    .btn{color:#fff;background:#393939;border:1px solid #595959;padding:10px 15px;border-radius:8px;font-size:13px;font-weight:700}.btn:hover{background:#505050}.btn.primary{background:#bbefad;color:#111;border-color:#bbefad}.btn.danger{color:#ffb5b5}.btn:disabled{opacity:.35;cursor:default}
+    .github-grid{display:grid;grid-template-columns:1fr 1fr .65fr;gap:12px}.github-grid .token-field{grid-column:1/-1}.admin-alert{background:#181818;padding:12px 15px;border-left:3px solid #ddd;font-size:12px;line-height:1.7;color:#ddd;border-radius:4px;margin:13px 0}.publish-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.status{min-height:24px;font-size:13px;color:#c2edae;margin:11px 0 0;white-space:pre-wrap}.status.error{color:#ffb5b5}.admin-summary{font-size:12px;color:#bbb;line-height:1.7}
+    @media(max-width:620px){.page-shell{padding:0 0 24px;min-height:0}.gallery{width:100%}.gallery-header{padding:18px 15px;min-height:76px}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tile-number{font-size:clamp(42px,12vw,64px)}.tile-mark{font-size:clamp(15px,3.8vw,20px)}.legend{gap:5px}.legend-icon{width:26px;height:26px}.legend-item{font-size:9px}.pagination{min-height:78px}.viewer-bar{padding:9px 12px}.viewer-viewport{padding:8px}.image-stage img{max-height:calc(100dvh - 158px)}.viewer-footer{padding:9px 7px}.viewer-footer small{font-size:10px}.nav-btn{min-width:68px;padding:9px 7px}.outline-btn{font-size:12px;padding:8px}.viewer-watermark{font-size:clamp(23px,6vw,46px)}.admin-shell{margin:20px auto;padding:0 12px}.admin-content,.type-fields,.github-grid{grid-template-columns:1fr}.admin-card{padding:15px}.admin-top h2{font-size:24px}}
+    @media(prefers-reduced-motion:reduce){.tile img{transition:none}}
+  </style>
+</head>
+<body>
+  <main class="page-shell" id="public-page">
+    <section class="gallery" aria-labelledby="gallery-title">
+      <header class="gallery-header">
+        <h1 id="gallery-title">#01 타입</h1>
+        <div class="legend" aria-label="샘플 스티커 안내">
+          <div class="legend-item"><button class="secret-trigger" id="frog-trigger" type="button" aria-label="사장 픽 스티커"><span id="frog-icon" aria-hidden="true"></span></button><span id="frog-label">사장 PICK</span></div>
+          <div class="legend-item"><span class="heart-legend" id="heart-icon" aria-hidden="true"></span><span id="heart-label">확정 선택</span></div>
+        </div>
+      </header>
+      <div id="gallery-grid" class="gallery-grid" aria-label="촬영 샘플 목록"></div>
+      <nav class="pagination" aria-label="타입 페이지 이동"><button class="page-arrow" id="page-prev" aria-label="이전 타입" type="button">〈</button><div id="page-numbers"></div><button class="page-arrow" id="page-next" aria-label="다음 타입" type="button">〉</button></nav>
+    </section>
+    <p class="caption">샘플을 누르면 크게 볼 수 있어요. 사진은 무단 저장 및 재사용을 삼가 주세요.</p>
+  </main>
+  <section id="admin-page" class="admin-shell" hidden aria-label="갤러리 관리">
+    <header class="admin-top"><div><h2>됒굴포토 · 관리자</h2><p>타입 제목, 사진, 스티커를 수정하고 GitHub에 게시할 수 있어요.</p></div><div class="admin-tools"><button id="admin-back" class="btn" type="button">← 갤러리로</button><button id="download-json" class="btn" type="button">설정 JSON 내보내기</button></div></header>
+    <section class="admin-card"><h3>01 / 타입 이름 변경</h3><p class="section-help">각 페이지에 표시될 제목을 따로 설정합니다. 수정 내용은 미리보기에 즉시 반영돼요.</p><div id="type-fields" class="type-fields"></div></section>
+    <div class="admin-content">
+      <section class="admin-card"><h3>02 / 사진 선택</h3><div class="edit-page-nav" id="edit-page-nav"></div><div class="edit-grid" id="edit-grid"></div><p class="admin-summary">사진 번호는 전체 01~36번이며, 페이지당 12개씩 표시합니다.</p></section>
+      <section class="admin-card"><h3>03 / 선택 사진 편집</h3><p id="edit-title" class="edit-title">01번 샘플</p><div class="edit-preview" id="edit-preview">사진 미등록</div><div class="edit-fields">
+        <label class="field"><span>사진 업로드 · JPG / PNG / WEBP</span><input id="photo-upload" class="file-input" type="file" accept="image/jpeg,image/png,image/webp"></label>
+        <label class="field"><span>사진 설명 (선택)</span><input id="photo-caption" type="text" maxlength="80" placeholder="예: 빈티지 화보 컨셉"></label>
+        <label class="toggle"><input id="pick-frog" type="checkbox"><span id="edit-frog-icon"></span><span>개구리 · 사장 PICK 표시</span></label>
+        <label class="toggle"><input id="pick-heart" type="checkbox"><span id="edit-heart-icon"></span><span>하트 · 확정 선택 표시</span></label>
+      </div><div class="edit-footer"><button class="btn danger" id="remove-photo" type="button">사진 제거</button></div><p class="section-help" style="margin:13px 0 0">사진과 스티커는 선택한 번호에만 적용됩니다. 사진을 제거해도 GitHub 저장소의 기존 파일은 자동 삭제되지 않습니다.</p></section>
+    </div>
+    <section class="admin-card"><h3>04 / GitHub에 게시</h3><p class="section-help">미리보기만으로는 방문자에게 변경되지 않습니다. GitHub 저장소에 게시하면 공개 사이트에 반영돼요.</p>
+      <div class="github-grid">
+        <label class="field"><span>GitHub 사용자명 또는 조직명</span><input id="repo-owner" spellcheck="false" autocomplete="off" placeholder="username"></label>
+        <label class="field"><span>저장소명</span><input id="repo-name" spellcheck="false" autocomplete="off" placeholder="my-photo-gallery"></label>
+        <label class="field"><span>브랜치</span><input id="repo-branch" spellcheck="false" autocomplete="off" value="main"></label>
+        <label class="field token-field"><span>Fine-grained Personal Access Token · Contents: Read and write</span><input id="repo-token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…"></label>
+      </div><div class="admin-alert">🔒 <strong>개구리 5번 클릭은 숨겨진 진입 방법일 뿐 로그인 보안이 아닙니다.</strong> GitHub 토큰은 이 브라우저에서 전송할 때만 사용하며 저장하거나 사이트 코드에 넣지 않습니다. 해당 저장소에만 Contents 쓰기 권한을 부여한 토큰을 사용하세요.</div>
+      <div class="publish-row"><button id="repo-check" class="btn" type="button">연결 확인</button><button id="repo-publish" class="btn primary" type="button">GitHub에 변경사항 게시</button><span class="admin-summary">새 사진 업로드 → gallery-data.json 업데이트</span></div><p class="status" id="publish-status" aria-live="polite"></p>
+    </section>
+  </section>
+  <dialog class="viewer" id="viewer" aria-label="사진 확대 보기"><div class="viewer-layout">
+    <header class="viewer-bar"><div class="viewer-title"><strong id="viewer-title">01 / 36</strong><small id="viewer-caption">사진 미리보기</small></div><div class="viewer-actions"><button id="viewer-zoom" type="button" class="outline-btn" aria-pressed="false">원본 100%</button><button id="viewer-close" type="button" class="close-btn" aria-label="닫기">×</button></div></header>
+    <div class="viewer-viewport" id="viewer-viewport"><div class="image-stage" id="image-stage"><img id="viewer-image" alt="촬영 샘플 확대 이미지" draggable="false"><div class="viewer-watermark" id="viewer-watermark">#됒굴포토</div><div class="viewer-sticker" id="viewer-stickers"></div></div><div id="viewer-empty" class="viewer-empty" hidden>아직 등록되지 않은 사진이에요.<small>관리자에서 해당 번호에 사진을 등록할 수 있습니다.</small></div></div>
+    <footer class="viewer-footer"><button id="viewer-prev" class="nav-btn" type="button">〈 이전</button><small>이미지를 클릭하지 않고 화면에 맞춰 확인할 수 있어요.<br>원본 100%는 실제 픽셀 크기로 표시합니다.</small><button id="viewer-next" class="nav-btn" type="button">다음 〉</button></footer>
+  </div></dialog>
+<script>
+(() => {
+  'use strict';
+  const PAGE_SIZE = 12, PAGE_COUNT = 3, TOTAL = PAGE_SIZE * PAGE_COUNT;
+  const fallback = { brand:'#됒굴포토', watermarkOpacity:0.5, typeNames:['#01 타입','#02 타입','#03 타입'], stickers:{frogLabel:'사장 PICK',heartLabel:'확정 선택'}, revision:1, photos:{'1':{src:'photos/01.jpg',caption:'샘플 테스트 이미지',ownerPick:false,confirmed:false}} };
+  const frogSvg = `<svg class="legend-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="13" cy="12" r="9" fill="#9dd873" stroke="#407b40" stroke-width="2"/><circle cx="35" cy="12" r="9" fill="#9dd873" stroke="#407b40" stroke-width="2"/><rect x="5" y="11" width="38" height="29" rx="16" fill="#a5e47e" stroke="#407b40" stroke-width="2"/><circle cx="13" cy="12" r="3" fill="#283d30"/><circle cx="35" cy="12" r="3" fill="#283d30"/><ellipse cx="24" cy="26" rx="4.5" ry="2" fill="#79b75c"/><path d="M17 30 Q24 36 31 30" fill="none" stroke="#325c39" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="28" r="3.5" fill="#f4aeba" opacity=".75"/><circle cx="36" cy="28" r="3.5" fill="#f4aeba" opacity=".75"/></svg>`;
+  const heartSvg = `<svg class="legend-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M24 41.2 7.6 25.5C0 18.1 5 7.2 14.3 7.2c4.2 0 7.5 2 9.7 5.7 2.2-3.7 5.5-5.7 9.7-5.7 9.3 0 14.3 10.9 6.7 18.3L24 41.2Z" fill="#ff9fae" stroke="#e46682" stroke-width="2" stroke-linejoin="round"/></svg>`;
+  const $ = id => document.getElementById(id); const pad = n => String(n).padStart(2,'0');
+  let data = structuredClone(fallback), currentPage=1, selectedPhoto=1, activePhoto=1, clickCount=0, firstFrogClick=0, adminMode=false, busy=false, viewId=0;
+  const stagedFiles = new Map(), stagedUrls = new Map();
+  $('frog-icon').innerHTML=frogSvg; $('heart-icon').innerHTML=heartSvg; $('edit-frog-icon').innerHTML=frogSvg; $('edit-heart-icon').innerHTML=heartSvg;
+  const photoAt = id => data.photos[String(id)] ?? {src:`photos/${pad(id)}.jpg`, caption:'',ownerPick:false,confirmed:false};
+  function editAt(id){ const key=String(id); if(!data.photos[key]) data.photos[key]={...photoAt(id)};return data.photos[key]; }
+  function normalize(input){
+    if(!input || typeof input!=='object') return structuredClone(fallback);
+    const next=structuredClone(fallback);
+    if(typeof input.brand==='string' && input.brand.length<80) next.brand=input.brand;
+    if(typeof input.watermarkOpacity==='number') next.watermarkOpacity=Math.max(0,Math.min(1,input.watermarkOpacity));
+    if(Array.isArray(input.typeNames)) next.typeNames=Array.from({length:PAGE_COUNT},(_,i)=>String(input.typeNames[i]||fallback.typeNames[i]).slice(0,50));
+    if(input.stickers && typeof input.stickers==='object') next.stickers={frogLabel:String(input.stickers.frogLabel||'사장 PICK').slice(0,40),heartLabel:String(input.stickers.heartLabel||'확정 선택').slice(0,40)};
+    if(typeof input.revision==='number') next.revision=input.revision;
+    if(input.photos && typeof input.photos==='object'){
+      next.photos={};for(let i=1;i<=TOTAL;i++){const p=input.photos[String(i)];if(!p||typeof p!=='object')continue;
+        const path=typeof p.src==='string' && (/^photos\/[A-Za-z0-9._-]+\.(jpg|jpeg|png|webp)$/i.test(p.src))?p.src:'';
+        next.photos[String(i)]={src:path,caption:String(p.caption||'').slice(0,80),ownerPick:p.ownerPick===true,confirmed:p.confirmed===true};
+      }
+    }
+    return next;
+  }
+  const photoUrl = id => stagedUrls.get(id) || (photoAt(id).src ? `${photoAt(id).src}?v=${encodeURIComponent(data.revision||1)}` : '');
+  function stickerMarkup(id){ const p=photoAt(id); let html=''; if(p.ownerPick)html+=`<span class="sticker frog" title="사장 PICK" aria-label="사장 PICK">${frogSvg}</span>`; if(p.confirmed)html+=`<span class="sticker heart" title="확정 선택" aria-label="확정 선택">${heartSvg}</span>`; return html; }
+  function renderGallery(){
+    $('gallery-title').textContent=data.typeNames[currentPage-1]||`#0${currentPage} 타입`;
+    $('frog-label').textContent=data.stickers.frogLabel; $('heart-label').textContent=data.stickers.heartLabel;
+    $('viewer-watermark').textContent=data.brand;
+    document.documentElement.style.setProperty('--watermark-opacity',String(data.watermarkOpacity));
+    $('gallery-grid').replaceChildren();
+    for(let i=(currentPage-1)*PAGE_SIZE+1;i<=currentPage*PAGE_SIZE;i++){
+      const button=document.createElement('button');button.className='tile';button.type='button';button.setAttribute('aria-label',`${pad(i)}번 사진 크게 보기`);
+      const src=photoUrl(i); if(src){const img=document.createElement('img');img.loading='lazy';img.alt=`${pad(i)}번 샘플`;img.src=src;img.onerror=()=>{button.classList.remove('has-photo');img.remove()};button.append(img);button.classList.add('has-photo');}
+      button.insertAdjacentHTML('beforeend',`<span class="tile-mark">#됒굴포토</span><span class="tile-mark second">#됒굴포토</span><span class="tile-stickers">${stickerMarkup(i)}</span><span class="tile-number">${pad(i)}</span>`);
+      button.addEventListener('click',()=>openViewer(i)); $('gallery-grid').append(button);
+    }
+    $('page-numbers').replaceChildren();for(let p=1;p<=PAGE_COUNT;p++){const b=document.createElement('button');b.className='page-item';b.type='button';b.textContent=String(p);b.title=data.typeNames[p-1];if(p===currentPage)b.setAttribute('aria-current','page');b.addEventListener('click',()=>setPage(p));$('page-numbers').append(b);}
+    $('page-prev').disabled=currentPage===1;$('page-next').disabled=currentPage===PAGE_COUNT;
+  }
+  function setPage(page){currentPage=Math.min(PAGE_COUNT,Math.max(1,page));renderGallery();}
+  $('page-prev').addEventListener('click',()=>setPage(currentPage-1)); $('page-next').addEventListener('click',()=>setPage(currentPage+1));
+  $('frog-trigger').addEventListener('click',()=>{const now=Date.now();if(clickCount===0||now-firstFrogClick>4000){clickCount=0;firstFrogClick=now;}clickCount++;if(clickCount>=5){clickCount=0;showAdmin();}});
+  function showAdmin(){$('public-page').hidden=true;$('admin-page').hidden=false;adminMode=true;selectedPhoto=(currentPage-1)*PAGE_SIZE+1;renderAdmin();window.scrollTo(0,0);}
+  function hideAdmin(){$('admin-page').hidden=true;$('public-page').hidden=false;adminMode=false;renderGallery();window.scrollTo(0,0);}
+  $('admin-back').addEventListener('click',hideAdmin);
+  function openViewer(id){activePhoto=id;const dlg=$('viewer');if(!dlg.open)dlg.showModal();dlg.classList.remove('is-natural');$('viewer-zoom').textContent='원본 100%';$('viewer-zoom').setAttribute('aria-pressed','false');renderViewer();}
+  function renderViewer(){
+    const id=++viewId, n=activePhoto, src=photoUrl(n); const img=$('viewer-image'); const stage=$('image-stage');const empty=$('viewer-empty');
+    $('viewer-title').textContent=`${pad(n)} / ${TOTAL}`;$('viewer-caption').textContent=photoAt(n).caption||'사진 미리보기';$('viewer-stickers').innerHTML=stickerMarkup(n);
+    $('viewer-prev').disabled=n===1;$('viewer-next').disabled=n===TOTAL;
+    if(!src){stage.hidden=true;empty.hidden=false;img.removeAttribute('src');return;}
+    stage.hidden=false;empty.hidden=true;img.onload=()=>{if(viewId===id){stage.hidden=false;empty.hidden=true;}};img.onerror=()=>{if(viewId===id){stage.hidden=true;empty.hidden=false;}};img.src=src;
+  }
+  $('viewer-close').addEventListener('click',()=>$('viewer').close());$('viewer-prev').addEventListener('click',()=>{activePhoto=Math.max(1,activePhoto-1);renderViewer()});$('viewer-next').addEventListener('click',()=>{activePhoto=Math.min(TOTAL,activePhoto+1);renderViewer()});
+  $('viewer-zoom').addEventListener('click',()=>{const natural=$('viewer').classList.toggle('is-natural');$('viewer-zoom').textContent=natural?'화면 맞춤':'원본 100%';$('viewer-zoom').setAttribute('aria-pressed',String(natural));});
+  document.addEventListener('keydown',e=>{if(!$('viewer').open)return;if(e.key==='ArrowRight')$('viewer-next').click();if(e.key==='ArrowLeft')$('viewer-prev').click();});
+  $('viewer-image').addEventListener('contextmenu',e=>e.preventDefault());
+  function renderAdmin(){
+    renderTypeFields();renderEditPageNav();renderEditGrid();renderEditor();
+  }
+  function renderTypeFields(){const node=$('type-fields');node.replaceChildren();data.typeNames.forEach((name,index)=>{const lab=document.createElement('label');lab.className='field';const span=document.createElement('span');span.textContent=`${pad(index+1)} 타입 제목`;const input=document.createElement('input');input.type='text';input.maxLength=50;input.value=name;input.addEventListener('input',()=>{data.typeNames[index]=input.value;renderGallery();renderEditPageNav();});lab.append(span,input);node.append(lab);});}
+  function renderEditPageNav(){const nav=$('edit-page-nav');nav.replaceChildren();for(let i=1;i<=PAGE_COUNT;i++){const b=document.createElement('button');b.type='button';b.textContent=`타입 ${i}`;if(Math.ceil(selectedPhoto/PAGE_SIZE)===i)b.classList.add('active');b.addEventListener('click',()=>{selectedPhoto=(i-1)*PAGE_SIZE+1;renderEditPageNav();renderEditGrid();renderEditor();});nav.append(b);}}
+  function renderEditGrid(){const node=$('edit-grid');node.replaceChildren();const start=(Math.ceil(selectedPhoto/PAGE_SIZE)-1)*PAGE_SIZE+1;for(let i=start;i<start+PAGE_SIZE;i++){const btn=document.createElement('button');btn.type='button';btn.className='edit-slot';if(selectedPhoto===i)btn.classList.add('selected');btn.setAttribute('aria-label',`${pad(i)}번 편집`);const src=photoUrl(i);if(src){const img=document.createElement('img');img.src=src;img.alt='';img.onerror=()=>img.remove();btn.append(img);}const p=photoAt(i);if(p.ownerPick||p.confirmed){const m=document.createElement('span');m.className='mini-sticker';m.textContent=(p.ownerPick?'🐸':'')+(p.confirmed?'♥':'');btn.append(m);}const b=document.createElement('b');b.textContent=pad(i);btn.append(b);btn.addEventListener('click',()=>{selectedPhoto=i;renderEditGrid();renderEditor();});node.append(btn);}}
+  function renderEditor(){const n=selectedPhoto,p=photoAt(n);$('edit-title').textContent=`${pad(n)}번 샘플`;$('photo-caption').value=p.caption||'';$('pick-frog').checked=Boolean(p.ownerPick);$('pick-heart').checked=Boolean(p.confirmed);$('photo-upload').value='';const preview=$('edit-preview');preview.replaceChildren();const src=photoUrl(n);if(src){const img=document.createElement('img');img.alt='선택 사진 미리보기';img.src=src;img.onerror=()=>{preview.textContent='이미지를 불러오지 못했습니다.'};preview.append(img);}else{preview.textContent='사진 미등록';}}
+  $('photo-caption').addEventListener('input',e=>{editAt(selectedPhoto).caption=e.target.value;if($('viewer').open&&activePhoto===selectedPhoto)renderViewer();});
+  $('pick-frog').addEventListener('change',e=>{editAt(selectedPhoto).ownerPick=e.target.checked;renderEditGrid();renderGallery();});
+  $('pick-heart').addEventListener('change',e=>{editAt(selectedPhoto).confirmed=e.target.checked;renderEditGrid();renderGallery();});
+  $('photo-upload').addEventListener('change',e=>{
+    const file=e.target.files&&e.target.files[0];if(!file)return;
+    if(!['image/jpeg','image/png','image/webp'].includes(file.type)){setStatus('JPG, PNG, WEBP 파일만 등록할 수 있어요.',true);e.target.value='';return;}
+    if(file.size>8*1024*1024){setStatus('사진은 8MB 이하로 줄여서 등록해 주세요.',true);e.target.value='';return;}
+    if(stagedUrls.has(selectedPhoto))URL.revokeObjectURL(stagedUrls.get(selectedPhoto));stagedFiles.set(selectedPhoto,file);stagedUrls.set(selectedPhoto,URL.createObjectURL(file));renderEditGrid();renderEditor();renderGallery();setStatus(`${pad(selectedPhoto)}번 사진을 미리보기에 등록했습니다. 방문자에게 보여주려면 GitHub에 게시해 주세요.`);
+  });
+  $('remove-photo').addEventListener('click',()=>{const n=selectedPhoto;if(stagedUrls.has(n))URL.revokeObjectURL(stagedUrls.get(n));stagedFiles.delete(n);stagedUrls.delete(n);editAt(n).src='';renderEditGrid();renderEditor();renderGallery();setStatus(`${pad(n)}번 사진을 목록에서 제거했습니다. GitHub에 게시해야 반영됩니다.`);});
+  function exportData(){const result=structuredClone(data);for(const [id,file] of stagedFiles.entries()){const ext=file.type==='image/png'?'png':file.type==='image/webp'?'webp':'jpg';result.photos[String(id)]={...photoAt(id),src:`photos/${pad(id)}.${ext}`};}return result;}
+  $('download-json').addEventListener('click',()=>{const json=JSON.stringify(exportData(),null,2);const blob=new Blob([json],{type:'application/json'});const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download='gallery-data.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);setStatus('gallery-data.json을 저장했습니다. 새 사진 파일은 별도로 GitHub에 올려야 합니다.');});
+  function setStatus(message,isError=false){const el=$('publish-status');el.textContent=message;el.classList.toggle('error',isError);}
+  function inferRepo(){const host=location.hostname;const path=location.pathname.split('/').filter(Boolean);if(host.endsWith('.github.io')){$('repo-owner').value=host.split('.')[0];if(path.length>0 && path[0]!=='index.html')$('repo-name').value=path[0];else $('repo-name').value=`${host.split('.')[0]}.github.io`;}}
+  function connection(){const owner=$('repo-owner').value.trim(),name=$('repo-name').value.trim(),branch=$('repo-branch').value.trim(),token=$('repo-token').value.trim();if(!/^[A-Za-z0-9][\w-]*$/.test(owner)||!/^[A-Za-z0-9._-]+$/.test(name)||!branch||!token){throw new Error('사용자명, 저장소명, 브랜치, GitHub 토큰을 모두 입력해 주세요.');}return {owner,name,branch,token};}
+  async function api(url,options,token){const r=await fetch(url,{...options,headers:{Accept:'application/vnd.github+json',Authorization:`Bearer ${token}`,'X-GitHub-Api-Version':'2022-11-28',...(options?.headers||{})},cache:'no-store'});if(r.status===404)return {notFound:true,status:404};const body=await r.json().catch(()=>({}));if(!r.ok)throw new Error(`GitHub 오류 ${r.status}: ${body.message||'접근 권한, 저장소 또는 브랜치를 확인해 주세요.'}`);return body;}
+  async function getContents(c,path){const full=path.split('/').map(encodeURIComponent).join('/');return api(`https://api.github.com/repos/${encodeURIComponent(c.owner)}/${encodeURIComponent(c.name)}/contents/${full}?ref=${encodeURIComponent(c.branch)}`,{},c.token);}
+  async function putContents(c,path,b64,message){const prev=await getContents(c,path);const full=path.split('/').map(encodeURIComponent).join('/');const payload={message,content:b64,branch:c.branch};if(prev&&!prev.notFound)payload.sha=prev.sha;return api(`https://api.github.com/repos/${encodeURIComponent(c.owner)}/${encodeURIComponent(c.name)}/contents/${full}`,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)},c.token);}
+  function base64Utf8(str){const bytes=new TextEncoder().encode(str);let bin='';for(let i=0;i<bytes.length;i+=8192)bin+=String.fromCharCode(...bytes.subarray(i,i+8192));return btoa(bin);}
+  function fileBase64(file){return new Promise((resolve,reject)=>{const fr=new FileReader();fr.onerror=()=>reject(new Error('사진을 읽을 수 없어요.'));fr.onload=()=>resolve(String(fr.result).split(',')[1]);fr.readAsDataURL(file);});}
+  async function withBusy(fn){if(busy)return;busy=true;$('repo-check').disabled=$('repo-publish').disabled=true;try{await fn()}catch(err){setStatus(err.message||String(err),true)}finally{busy=false;$('repo-check').disabled=$('repo-publish').disabled=false;}}
+  $('repo-check').addEventListener('click',()=>withBusy(async()=>{const c=connection();setStatus('GitHub 연결을 확인하고 있습니다…');const r=await api(`https://api.github.com/repos/${encodeURIComponent(c.owner)}/${encodeURIComponent(c.name)}`,{},c.token);if(r.notFound)throw new Error('저장소를 찾을 수 없어요. GitHub 저장소명과 토큰 접근 권한을 확인해 주세요.');setStatus(`연결 성공: ${r.full_name} · ${c.branch} 브랜치에 게시할 수 있는지 최종 저장 시 확인합니다.`);}));
+  $('repo-publish').addEventListener('click',()=>withBusy(async()=>{
+    const c=connection();const count=stagedFiles.size;const answer=window.confirm(`현재 편집 내용을 ${c.owner}/${c.name}의 ${c.branch} 브랜치에 게시할까요?\n새 사진 ${count}개 + 설정 파일 1개를 업데이트합니다.`);if(!answer)return;
+    setStatus('GitHub 게시 준비 중…');let done=0;
+    for(const [id,file] of Array.from(stagedFiles.entries())){
+      const ext=file.type==='image/png'?'png':file.type==='image/webp'?'webp':'jpg';const path=`photos/${pad(id)}.${ext}`;setStatus(`사진 업로드 중… (${done+1}/${count}) · ${pad(id)}번`);
+      await putContents(c,path,await fileBase64(file),`gallery: update photo ${pad(id)}`);editAt(id).src=path;
+      URL.revokeObjectURL(stagedUrls.get(id));stagedUrls.delete(id);stagedFiles.delete(id);done++;
+    }
+    data.revision=Date.now();setStatus('갤러리 설정을 GitHub에 저장하고 있습니다…');
+    await putContents(c,'gallery-data.json',base64Utf8(JSON.stringify(exportData(),null,2)+'\n'),'gallery: update titles photos and stickers');
+    setStatus('게시 완료! GitHub Pages 재배포가 끝나면 방문자 화면에 반영됩니다. 사진 미리보기에도 변경이 적용되었어요.');renderGallery();renderEditGrid();renderEditor();
+  }));
+  async function init(){inferRepo();try{const r=await fetch(`./gallery-data.json?v=${Date.now()}`,{cache:'no-store'});if(r.ok)data=normalize(await r.json());}catch(e){ /* file:// 테스트: JSON 요청이 막혀도 화면은 작동합니다. */ }renderGallery();}
+  init();
+})();
+</script>
+</body>
+</html>

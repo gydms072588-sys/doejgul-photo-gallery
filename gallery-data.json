@@ -1,0 +1,13 @@
+{
+  "brand": "#됒굴포토",
+  "watermarkOpacity": 0.5,
+  "typeNames": ["#01 타입", "#02 타입", "#03 타입"],
+  "stickers": {
+    "frogLabel": "사장 PICK",
+    "heartLabel": "확정 선택"
+  },
+  "revision": 1,
+  "photos": {
+    "1": { "src": "photos/01.jpg", "caption": "샘플 테스트 이미지", "ownerPick": false, "confirmed": false }
+  }
+}
